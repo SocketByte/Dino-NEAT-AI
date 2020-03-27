@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"></script>
+    <script src="NEAT.js"></script>
+    <script src="dino.js"></script>
+    <script src="cookies.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #474747;
+            display: flex;
+            font-family: 'Roboto', serif;
+            color: white;
+        }
+        canvas {
+            display: flex;
+        }
+        main {
+            display: flex;
+            flex-direction: column;
+            padding: 30px;
+            width: 200px;
+            align-items: flex-start;
+        }
+
+        input {
+            width: 190px;
+            height: 25px;
+            margin-bottom: 5px;
+        }
+
+        select {
+            width: 195px;
+            height: 25px;
+            margin-bottom: 5px;
+        }
+
+        button {
+            width: 196px;
+            height: 25px;
+            color: black;
+            background-color: white;
+
+        }
+
+        small {
+            font-size: 8.5pt;
+        }
+
+        h2 {
+            font-size: 22pt;
+            margin: 0 0 15px;
+        }
+
+        p {
+            margin: 2px;
+            font-size: 9pt;
+        }
+    </style>
+</head>
+<body>
+<main>
+    <h2>Dino NEAT A.I.</h2>
+    <form onsubmit="changeParameters()">
+        <p>Population size</p>
+        <input id="population" type="number" placeholder="500" value="500">
+        <p>Obstacle rate</p>
+        <input id="obstacle_rate" type="number" placeholder="80" value="80">
+        <p>Obstacle rate gain</p>
+        <input id="obstacle_rate_gain" type="number" placeholder="0.1" value="0.1">
+        <p>Obstacle speed</p>
+        <input id="obstacle_speed" type="number" placeholder="8" value="8">
+        <p>Obstacle speed gain</p>
+        <input id="obstacle_speed_gain" type="number" placeholder="0.02" value="0.02">
+        <p>Bird spawn chance</p>
+        <input id="bird_chance" type="number" placeholder="0.2" value="0.2">
+        <p>Small cactus spawn chance</p>
+        <input id="small_cactus_chance" type="number" placeholder="0.6" value="0.6">
+        <p>Big cactus spawn chance</p>
+        <input id="big_cactus_chance" type="number" placeholder="0.9" value="0.9">
+        <p>Group cactus spawn chance</p>
+        <input id="group_cactus_chance" type="number" placeholder="1.0" value="1.0">
+        <p>Crossover method</p>
+        <select id="crossover_method">
+            <option>RANDOM</option>
+            <option>SLICE</option>
+        </select>
+        <button type="submit">Save & Reload</button>
+        <small>Made by Adam Grzegorzewski | 2020</small>
+        <br><br><br><br>
+        <small>Shortcuts:</small><br>
+        <small>C - show closest obstacle</small><br>
+        <small>S - spectator mode</small>
+    </form>
+</main>
+</body>
+</html>
